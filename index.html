@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>BSS Hive Builder — Fan UI</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="logo">🐝 Bee Swarm — Hive Builder</div>
+      <div class="controls">
+        <input id="search" placeholder="Search bees..." />
+        <select id="colorFilter">
+          <option value="all">All colors</option>
+          <option value="Red">Red</option>
+          <option value="Blue">Blue</option>
+          <option value="White">White</option>
+          <option value="Colorless">Colorless</option>
+        </select>
+        <select id="rarityFilter">
+          <option value="all">All rarities</option>
+          <option value="Common">Common</option>
+          <option value="Rare">Rare</option>
+          <option value="Epic">Epic</option>
+          <option value="Legendary">Legendary</option>
+          <option value="Mythic">Mythic</option>
+          <option value="Event">Event</option>
+        </select>
+        <label class="gifted-label">
+          <input type="checkbox" id="giftedToggle" /> Gifted
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <aside class="panel bee-panel">
+      <h2>Bee Library</h2>
+      <div id="beeList" class="bee-list"></div>
+      <footer class="source">Source: Bee Swarm Simulator Wiki. :contentReference[oaicite:1]{index=1}</footer>
+    </aside>
+
+    <section class="panel hive-panel">
+      <h2>Hive (click a slot to remove)</h2>
+      <div id="hiveGrid" class="hive-grid"></div>
+      <div class="hive-actions">
+        <button id="clearHive">Clear Hive</button>
+        <button id="exportHive">Export (JSON)</button>
+      </div>
+      <textarea id="exportArea" readonly></textarea>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
